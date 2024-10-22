@@ -44,7 +44,7 @@ function send_disk_metric_to_victoria {
 	"partition": "${PARTITION}"
 	},
 	"values":    [${METRIC_VALUE}],
-	timestamps": [${timestamp}]
+	"timestamps": [${timestamp}]
 }
 EOF
 }
