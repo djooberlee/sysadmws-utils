@@ -158,7 +158,7 @@ df -P -BM | grep -vE $FILTER | awk '{ print $5 " " $6 " " $4 }' | while read out
 					"critical threshold": "'$CRITICAL'%"
 				}
 			}' | /opt/sysadmws/notify_devilry/notify_devilry.py
-			if [[ -z "${VMAGENT_URL}" ]]; then
+			if [[ ! -z "${VMAGENT_URL}" ]]; then
 				send_disk_metric_to_victoria microdevops_agent_disk_alert_space_usage_percentage_severity ${severity_fatal}
 				send_disk_metric_to_victoria microdevops_agent_disk_alert_space_usage_percentage $USEP
 			fi
@@ -179,7 +179,7 @@ df -P -BM | grep -vE $FILTER | awk '{ print $5 " " $6 " " $4 }' | while read out
 					"critical threshold": "'$CRITICAL'%"
 				}
 			}' | /opt/sysadmws/notify_devilry/notify_devilry.py
-			if [[ -z "${VMAGENT_URL}" ]]; then
+			if [[ ! -z "${VMAGENT_URL}" ]]; then
 				send_disk_metric_to_victoria microdevops_agent_disk_alert_space_usage_percentage_severity ${severity_critical}
 				send_disk_metric_to_victoria microdevops_agent_disk_alert_space_usage_percentage $USEP
 			fi
@@ -199,7 +199,7 @@ df -P -BM | grep -vE $FILTER | awk '{ print $5 " " $6 " " $4 }' | while read out
 					"critical threshold": "'$CRITICAL'%"
 				}
 			}' | /opt/sysadmws/notify_devilry/notify_devilry.py
-			if [[ -z "${VMAGENT_URL}" ]]; then
+			if [[ ! -z "${VMAGENT_URL}" ]]; then
 				send_disk_metric_to_victoria microdevops_agent_disk_alert_space_usage_percentage_severity ${severity_major}
 				send_disk_metric_to_victoria microdevops_agent_disk_alert_space_usage_percentage $USEP
 			fi
@@ -219,7 +219,7 @@ df -P -BM | grep -vE $FILTER | awk '{ print $5 " " $6 " " $4 }' | while read out
 					"critical threshold": "'$CRITICAL'%"
 				}
 			}' | /opt/sysadmws/notify_devilry/notify_devilry.py
-			if [[ -z "${VMAGENT_URL}" ]]; then
+			if [[ ! -z "${VMAGENT_URL}" ]]; then
 				send_disk_metric_to_victoria microdevops_agent_disk_alert_space_usage_percentage_severity ${severity_ok}
 				send_disk_metric_to_victoria microdevops_agent_disk_alert_space_usage_percentage $USEP
 			fi
@@ -242,7 +242,7 @@ df -P -BM | grep -vE $FILTER | awk '{ print $5 " " $6 " " $4 }' | while read out
 					"critical threshold": "'$FREE_SPACE_CRITICAL'MB"
 				}
 			}' | /opt/sysadmws/notify_devilry/notify_devilry.py
-			if [[ -z "${VMAGENT_URL}" ]]; then
+			if [[ ! -z "${VMAGENT_URL}" ]]; then
 				send_disk_metric_to_victoria microdevops_agent_disk_alert_free_space_mb_severity ${severity_fatal}
 				send_disk_metric_to_victoria microdevops_agent_disk_alert_free_space_mb $FREESP
 			fi
@@ -263,7 +263,7 @@ df -P -BM | grep -vE $FILTER | awk '{ print $5 " " $6 " " $4 }' | while read out
 					"critical threshold": "'$FREE_SPACE_CRITICAL'MB"
 				}
 			}' | /opt/sysadmws/notify_devilry/notify_devilry.py
-			if [[ -z "${VMAGENT_URL}" ]]; then
+			if [[ ! -z "${VMAGENT_URL}" ]]; then
 				send_disk_metric_to_victoria microdevops_agent_disk_alert_free_space_mb_severity ${severity_critical}
 				send_disk_metric_to_victoria microdevops_agent_disk_alert_free_space_mb $FREESP
 			fi
@@ -283,7 +283,7 @@ df -P -BM | grep -vE $FILTER | awk '{ print $5 " " $6 " " $4 }' | while read out
 					"critical threshold": "'$FREE_SPACE_CRITICAL'MB"
 				}
 			}' | /opt/sysadmws/notify_devilry/notify_devilry.py
-			if [[ -z "${VMAGENT_URL}" ]]; then
+			if [[ ! -z "${VMAGENT_URL}" ]]; then
 				send_disk_metric_to_victoria microdevops_agent_disk_alert_free_space_mb_severity ${severity_major}
 				send_disk_metric_to_victoria microdevops_agent_disk_alert_free_space_mb $FREESP
 			fi
@@ -303,7 +303,7 @@ df -P -BM | grep -vE $FILTER | awk '{ print $5 " " $6 " " $4 }' | while read out
 					"critical threshold": "'$FREE_SPACE_CRITICAL'MB"
 				}
 			}' | /opt/sysadmws/notify_devilry/notify_devilry.py
-			if [[ -z "${VMAGENT_URL}" ]]; then
+			if [[ ! -z "${VMAGENT_URL}" ]]; then
 				send_disk_metric_to_victoria microdevops_agent_disk_alert_free_space_mb_severity ${severity_ok}
 				send_disk_metric_to_victoria microdevops_agent_disk_alert_free_space_mb $FREESP
 			fi
@@ -355,7 +355,7 @@ df -P -BM | grep -vE $FILTER | awk '{ print $5 " " $6 " " $4 }' | while read out
 					"predict critical threshold": "'$PREDICT_CRITICAL'"
 				}
 			}' | /opt/sysadmws/notify_devilry/notify_devilry.py
-			if [[ -z "${VMAGENT_URL}" ]]; then
+			if [[ ! -z "${VMAGENT_URL}" ]]; then
 				send_disk_metric_to_victoria microdevops_agent_disk_alert_predicted_full_sec_severity ${severity_minor}
 				send_disk_metric_to_victoria microdevops_agent_disk_alert_predicted_full_sec $PREDICT_SECONDS
 			fi
@@ -380,7 +380,7 @@ df -P -BM | grep -vE $FILTER | awk '{ print $5 " " $6 " " $4 }' | while read out
 					"predict critical threshold": "'$PREDICT_CRITICAL'"
 				}
 			}' | /opt/sysadmws/notify_devilry/notify_devilry.py
-			if [[ -z "${VMAGENT_URL}" ]]; then
+			if [[ ! -z "${VMAGENT_URL}" ]]; then
 				send_disk_metric_to_victoria microdevops_agent_disk_alert_predicted_full_sec_severity ${severity_warning}
 				send_disk_metric_to_victoria microdevops_agent_disk_alert_predicted_full_sec $PREDICT_SECONDS
 			fi
@@ -405,7 +405,7 @@ df -P -BM | grep -vE $FILTER | awk '{ print $5 " " $6 " " $4 }' | while read out
 					"predict critical threshold": "'$PREDICT_CRITICAL'"
 				}
 			}' | /opt/sysadmws/notify_devilry/notify_devilry.py
-			if [[ -z "${VMAGENT_URL}" ]]; then
+			if [[ ! -z "${VMAGENT_URL}" ]]; then
 				send_disk_metric_to_victoria microdevops_agent_disk_alert_predicted_full_sec_severity ${severity_ok}
 				send_disk_metric_to_victoria microdevops_agent_disk_alert_predicted_full_sec $PREDICT_SECONDS
 			fi
@@ -453,7 +453,7 @@ df -P -i | grep -vE $FILTER | awk '{ print $5 " " $6 }' | while read output; do
 				"critical threshold": "'$CRITICAL'%"
 			}
 		}' | /opt/sysadmws/notify_devilry/notify_devilry.py
-		if [[ -z "${VMAGENT_URL}" ]]; then
+		if [[ ! -z "${VMAGENT_URL}" ]]; then
 			send_disk_metric_to_victoria microdevops_agent_disk_alert_inode_usage_percentage_severity ${severity_fatal}
 			send_disk_metric_to_victoria microdevops_agent_disk_alert_inode_usage_percentage $USEP
 		fi
@@ -473,7 +473,7 @@ df -P -i | grep -vE $FILTER | awk '{ print $5 " " $6 }' | while read output; do
 				"critical threshold": "'$CRITICAL'%"
 			}
 		}' | /opt/sysadmws/notify_devilry/notify_devilry.py
-		if [[ -z "${VMAGENT_URL}" ]]; then
+		if [[ ! -z "${VMAGENT_URL}" ]]; then
 			send_disk_metric_to_victoria microdevops_agent_disk_alert_inode_usage_percentage_severity ${severity_critical}
 			send_disk_metric_to_victoria microdevops_agent_disk_alert_inode_usage_percentage $USEP
 		fi
@@ -492,7 +492,7 @@ df -P -i | grep -vE $FILTER | awk '{ print $5 " " $6 }' | while read output; do
 				"critical threshold": "'$CRITICAL'%"
 			}
 		}' | /opt/sysadmws/notify_devilry/notify_devilry.py
-		if [[ -z "${VMAGENT_URL}" ]]; then
+		if [[ ! -z "${VMAGENT_URL}" ]]; then
 			send_disk_metric_to_victoria microdevops_agent_disk_alert_inode_usage_percentage_severity ${severity_major}
 			send_disk_metric_to_victoria microdevops_agent_disk_alert_inode_usage_percentage $USEP
 		fi
@@ -511,7 +511,7 @@ df -P -i | grep -vE $FILTER | awk '{ print $5 " " $6 }' | while read output; do
 				"critical threshold": "'$CRITICAL'%"
 			}
 		}' | /opt/sysadmws/notify_devilry/notify_devilry.py
-		if [[ -z "${VMAGENT_URL}" ]]; then
+		if [[ ! -z "${VMAGENT_URL}" ]]; then
 			send_disk_metric_to_victoria microdevops_agent_disk_alert_inode_usage_percentage_severity ${severity_ok}
 			send_disk_metric_to_victoria microdevops_agent_disk_alert_inode_usage_percentage $USEP
 		fi
